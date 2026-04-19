@@ -124,7 +124,7 @@ export default function ProductDetailPage({ params }: Props) {
                         <img 
                             src={`/images/products/${product.id}.jpg`} 
                             alt={product.name}
-                            className="w-full h-full object-cover mix-blend-lighten opacity-95 group-hover:scale-105 transition-transform duration-700 z-0"
+                            className="w-full h-full object-contain p-6 md:p-12 mix-blend-lighten opacity-95 group-hover:scale-105 transition-transform duration-700 z-0"
                             onError={(e) => {
                                 const t = e.target as HTMLImageElement;
                                 if (t.src.endsWith('.jpg')) t.src = `/images/products/${product.id}.png`;
@@ -250,7 +250,7 @@ export default function ProductDetailPage({ params }: Props) {
                             <Package size={20} className="text-amber-400" />
                             <h2 className="text-2xl font-bold text-white">Related Products</h2>
                         </div>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                             {related.map((p, i) => (
                                 <motion.div
                                     key={p.id}

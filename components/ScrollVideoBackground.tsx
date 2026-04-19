@@ -59,8 +59,12 @@ export default function ScrollVideoBackground({
         const logicalW = cw / dpr;
         const logicalH = ch / dpr;
 
+        // Apply DPI scaling
+        const isMobile = logicalW < 768;
+        const effectiveFit = (isMobile && objectFit === "cover") ? "contain" : objectFit;
+
         // Choose scale math based on objectFit
-        const scale = objectFit === "contain" 
+        const scale = effectiveFit === "contain" 
             ? Math.min(logicalW / iw, logicalH / ih)
             : Math.max(logicalW / iw, logicalH / ih);
             

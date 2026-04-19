@@ -84,7 +84,7 @@ export default function Hero() {
                 <motion.div style={{ y: textY, opacity, scale }}>
                     {/* Badge */}
                     <motion.div
-                        className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full border border-white/[0.15] bg-white/[0.08] backdrop-blur-2xl"
+                        className="inline-flex items-center gap-2 px-3 sm:px-5 py-2 mb-8 rounded-full border border-white/[0.15] bg-white/[0.08] backdrop-blur-2xl"
                         initial={{ opacity: 0, y: -40, scale: 0.8 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
@@ -94,7 +94,7 @@ export default function Hero() {
                             animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
                             transition={{ duration: 2, repeat: Infinity }}
                         />
-                        <span className="text-sm text-amber-300 font-semibold tracking-wider uppercase">
+                        <span className="text-[10px] sm:text-xs md:text-sm text-amber-300 font-semibold tracking-wider uppercase">
                             Premium Technology Partner
                         </span>
                     </motion.div>
@@ -102,7 +102,7 @@ export default function Hero() {
                     {/* Title */}
                     <div className="overflow-hidden mb-4">
                         <motion.h1
-                            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-[1.1] drop-shadow-2xl"
+                            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-[1.1] drop-shadow-2xl"
                             initial={{ y: "100%" }}
                             animate={{ y: 0 }}
                             transition={{ duration: 1, delay: 0.3, ease: [0.33, 1, 0.68, 1] }}
@@ -112,7 +112,7 @@ export default function Hero() {
                     </div>
                     <div className="overflow-hidden mb-8">
                         <motion.h1
-                            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] drop-shadow-2xl"
+                            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] drop-shadow-2xl"
                             initial={{ y: "100%" }}
                             animate={{ y: 0 }}
                             transition={{ duration: 1, delay: 0.5, ease: [0.33, 1, 0.68, 1] }}
@@ -124,7 +124,7 @@ export default function Hero() {
                     </div>
 
                     <motion.p
-                        className="text-white text-lg md:text-xl max-w-2xl mx-auto mb-4 drop-shadow-lg"
+                        className="text-white text-sm sm:text-lg md:text-xl max-w-2xl mx-auto mb-4 drop-shadow-lg"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8, duration: 0.8 }}
@@ -201,9 +201,9 @@ export default function Hero() {
 
                     {/* Buttons */}
                     <motion.div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Link href="/products">
+                        <Link href="/products" className="w-full sm:w-auto">
                             <motion.button
-                                className="px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-white rounded-full font-bold text-lg shadow-lg shadow-amber-500/30"
+                                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-white rounded-full font-bold text-base sm:text-lg shadow-lg shadow-amber-500/30"
                                 initial={{ opacity: 0, y: 40, scale: 0.8 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 transition={{ delay: 1.2, type: "spring", bounce: 0.5 }}
@@ -213,9 +213,9 @@ export default function Hero() {
                                 Explore Products
                             </motion.button>
                         </Link>
-                        <Link href="/contact">
+                        <Link href="/contact" className="w-full sm:w-auto">
                             <motion.button
-                                className="px-8 py-4 border-2 border-amber-500/40 text-amber-300 rounded-full font-bold text-lg backdrop-blur-sm bg-black/20 hover:bg-amber-500/20 transition-colors"
+                                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-amber-500/40 text-amber-300 rounded-full font-bold text-base sm:text-lg backdrop-blur-sm bg-black/20 hover:bg-amber-500/20 transition-colors"
                                 initial={{ opacity: 0, y: 40, scale: 0.8 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 transition={{ delay: 1.4, type: "spring", bounce: 0.5 }}

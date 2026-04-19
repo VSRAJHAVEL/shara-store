@@ -31,6 +31,9 @@ export default function GlobalBackground() {
                     frameStep={5}
                 />
             )}
+            
+            {/* Mobile Contrast Guard - Dims the heavy animations aggressively on small screens to preserve reading contrast */}
+            <div className="absolute inset-0 bg-black/70 md:bg-black/0 pointer-events-none transition-colors duration-500 z-10" />
         </div>
     );
 }

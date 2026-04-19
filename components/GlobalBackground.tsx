@@ -19,7 +19,7 @@ export default function GlobalBackground() {
                     key="products-bg"
                     frameCount={192}
                     framePath={(i: number) => `/products-frames/${i.toString().padStart(5, "0")}.jpg`}
-                    frameStep={6}
+                    frameStep={2}
                     objectFit="cover"
                     opacity={0.8}
                 />
@@ -28,7 +28,7 @@ export default function GlobalBackground() {
                     key="global-bg"
                     frameCount={147}
                     framePath={(i: number) => `/frames/ezgif-frame-${i.toString().padStart(3, "0")}.jpg`}
-                    frameStep={5}
+                    frameStep={2}
                 />
             )}
             

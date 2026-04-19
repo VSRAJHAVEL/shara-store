@@ -197,7 +197,7 @@ export default function ScrollVideoBackground({
 
     return (
         <>
-            <div className="fixed inset-0 -z-10 bg-black transform-gpu will-change-transform">
+            <div className="fixed inset-0 -z-10 bg-black">
                 <canvas ref={canvasRef} className="w-full h-full" style={{ opacity }} />
             </div>
 

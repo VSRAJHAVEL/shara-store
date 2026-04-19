@@ -1,50 +1,35 @@
 # Shara Computers Store
 
-🌍 **Live Deployment**: [https://shara-store.vercel.app/](https://shara-store.vercel.app/)
+**Live Deployment**: [https://shara-store.vercel.app/](https://shara-store.vercel.app/)
 
-A premium, high-performance E-Commerce storefront built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**.
+A high-performance, responsive E-Commerce application architected with Next.js 14, Tailwind CSS, and Framer Motion. This project demonstrates advanced client-side rendering techniques, including hardware-accelerated GPU canvas sequencing and heavily parallelized DOM manipulations specifically optimized for mobile environments.
 
-## Overview
-Shara Computers provides a sleek hardware and accessories shopping experience. The architecture revolves around an immersive aesthetic utilizing hardware-accelerated Canvas scroll sequences running outside the React thread, paired with a modern Request-a-Quote pipeline via direct WhatsApp integration.
+## Architecture & Overview
 
-## Key Features
-- ⚡ **Next.js App Router**: Server-Side Rendering (SSR) and seamless Static Site Generation (SSG) for instantaneous product navigation.
-- 🎨 **Dynamic Native Canvas Animations**: Immersive frame-by-frame background animations mapped natively to GPU hardware components via 120hz `requestAnimationFrame` loops, decoupling expensive rendering from the Javascript thread.
-- 🛒 **Zero-Backend Cart**: LocalStorage-driven cart management seamlessly integrated into an instant WhatsApp checkout flow.
-- 📱 **Fully Responsive**: Mobile-first Tailwind utility architecture with dynamic Flexbox container-clamping to prevent horizontal pixel bleeding, alongside adaptive CSS graphical filters. 
-- 🗄️ **Comprehensive Catalog**: 200+ distinct tech products spanning Desktop PCs, Laptops, Keyboards, CCTV, and Monitors with real-world metadata and category/brand dynamic routing (`/products/[category]/[brand]/[id]`).
+Shara Computers provides a comprehensive hardware and accessories shopping experience. The platform prioritizes high-fidelity animation and layout consistency while maintaining aggressive performance heuristics.
+
+The core of the application utilizes a Custom Canvas Engine that completely strips scroll-linked animations away from the React Virtual DOM lifecycle, mapping mathematical physics curves directly to raw Javascript hardware handlers.
+
+## Core Implementations
+
+- **Next.js App Router**: Leverages advanced SSR and static generation to maintain ultra-low Time-to-Interactive (TTI).
+- **Native Canvas Engine**: Custom scroll-linked frame sequencing mapping 120Hz raw `requestAnimationFrame` loops to dedicated GPU compositor layers via `transform-gpu`. This decouples heavy image painting from the main JavaScript thread to ensure 60fps locked scrolling on low-end mobile devices.
+- **Client-Side Cart Management**: A strict LocalStorage-driven cart implementation with zero-backend dependencies, bridging complex multi-state quote arrays directly to a WhatsApp Business integration.
+- **Responsive Layout Constraint Enforcement**: Complex CSS container queries and flexbox clamping techniques that guarantee pixel-perfect responsiveness by mathematically suppressing implicit geometric overflows across all viewports.
+- **Dynamic Routing**: Implementation of deep `/categories/[brand]/[id]` dynamic slug interpolation for over 200 concurrent products, maintaining strong architectural parity between real-world specs and data schemas.
 
 ## Tech Stack
-- **Framework**: Next.js (App Router)
-- **Styling**: Tailwind CSS v3
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Deployment & Edge Processing**: Vercel
 
-## Getting Started Locally
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: Tailwind CSS v3 / Vanilla CSS
+- **Animation Engine**: Framer Motion
+- **Iconography**: Lucide React
+- **Deployment & Edge Computing**: Vercel
 
-First, make sure you have Node.js installed. Then, clone the repository and install the dependencies:
+## Deployment Specifications
 
-```bash
-npm install
-```
+The repository is configured for automated CI/CD deployment via Vercel Edge Networks. All assets and Next.js optimization pipelines execute natively during the cloud container build target. Manual static extraction and builds can be executed via the standard Next.js build binaries on Node.js v18+.
 
-Run the development server:
+## Maintenance
 
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Build and Production
-
-To build the optimized static production bundle:
-
-```bash
-npm run build
-npm start
-```
-
-## Contributing
-Maintained by Rajhavel V S.
+Designed, developed, and maintained by Rajhavel V S.

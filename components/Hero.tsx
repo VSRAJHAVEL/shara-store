@@ -143,7 +143,7 @@ export default function Hero() {
 
                     {/* ── Search Bar ── */}
                     <motion.div
-                        className="max-w-2xl mx-auto mb-10"
+                        className="w-full max-w-2xl mx-auto mb-10"
                         initial={{ opacity: 0, y: 30, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ delay: 1.1, duration: 0.7, type: "spring" }}
@@ -169,7 +169,7 @@ export default function Hero() {
                                     value={query}
                                     onChange={(e) => setQuery(e.target.value)}
                                     placeholder="Search products, brands, categories..."
-                                    className="flex-1 bg-transparent text-white placeholder-white/40 pl-14 pr-4 py-4 text-base outline-none"
+                                    className="flex-1 min-w-0 bg-transparent text-white placeholder-white/40 pl-14 pr-4 py-4 text-base outline-none"
                                 />
 
                                 {/* Search button */}

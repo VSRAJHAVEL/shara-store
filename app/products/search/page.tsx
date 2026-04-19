@@ -50,7 +50,7 @@ function SearchResults() {
                         <ArrowLeft size={14} /> All Categories
                     </Link>
 
-                    <form onSubmit={handleSearch} className="relative group max-w-2xl">
+                    <form onSubmit={handleSearch} className="relative group w-full max-w-2xl">
                         <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-amber-500/40 to-amber-500/40 opacity-0 group-focus-within:opacity-100 blur-sm transition-opacity duration-300" />
                         <div className="relative flex items-center bg-white/[0.07] backdrop-blur-xl border border-white/[0.12] rounded-2xl overflow-hidden">
                             <Search size={20} className="absolute left-5 text-amber-400/80 pointer-events-none" />
@@ -59,7 +59,7 @@ function SearchResults() {
                                 value={inputVal}
                                 onChange={(e) => setInputVal(e.target.value)}
                                 placeholder="Search products, brands, categories..."
-                                className="flex-1 bg-transparent text-white placeholder-white/40 pl-14 pr-4 py-4 text-base outline-none"
+                                className="flex-1 min-w-0 bg-transparent text-white placeholder-white/40 pl-14 pr-4 py-4 text-base outline-none"
                             />
                             <motion.button
                                 type="submit"

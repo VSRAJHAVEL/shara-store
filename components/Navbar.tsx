@@ -30,8 +30,8 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto">
                 <div
                     className={`flex items-center justify-between rounded-full px-8 py-4 transition-all duration-500 ${scrolled
-                        ? "bg-white/[0.1] backdrop-blur-md border border-white/[0.1] shadow-lg"
-                        : "bg-transparent backdrop-blur-sm border border-white/[0.05]"
+                        ? "bg-black/80 md:bg-white/[0.1] md:backdrop-blur-md border border-white/[0.1] shadow-lg"
+                        : "bg-transparent md:backdrop-blur-sm border border-white/[0.05]"
                         }`}
                 >
                     {/* Logo */}
@@ -93,7 +93,7 @@ export default function Navbar() {
                     <motion.div
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="mt-2 bg-white/[0.08] backdrop-blur-2xl rounded-2xl shadow-2xl border border-white/[0.15] p-6 md:hidden"
+                        className="mt-2 bg-black/95 md:bg-white/[0.08] md:backdrop-blur-2xl rounded-2xl shadow-2xl border border-white/[0.15] p-6 md:hidden"
                     >
                         {navLinks.map((link) => (
                             <div key={link.name} className="border-b border-white/10 last:border-0">

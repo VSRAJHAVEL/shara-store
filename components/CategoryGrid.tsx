@@ -59,9 +59,9 @@ export default function CategoryGrid() {
                                 <Link href={`/products/${cat.slug}`} className="block h-full relative z-10 p-6 flex flex-col justify-end min-h-[240px]">
                                     {/* Background Image */}
                                     <div className="absolute inset-0 z-0 overflow-hidden rounded-2xl bg-[#1a0f00]">
-                                        <img src={cat.image} alt={cat.name} className="w-full h-full object-cover opacity-60 mix-blend-lighten group-hover:opacity-100 transition-all duration-700 group-hover:scale-110" />
+                                        <img src={cat.image} alt={cat.name} className="w-full h-full object-cover opacity-60 md:mix-blend-lighten group-hover:opacity-100 transition-all duration-700 group-hover:scale-110" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-[#2b1600] via-[#1c0e00]/60 to-transparent group-hover:via-[#1c0e00]/80 transition-colors duration-500" />
-                                        <div className="absolute inset-0 bg-amber-500/10 mix-blend-overlay pointer-events-none" />
+                                        <div className="absolute inset-0 bg-amber-500/10 md:mix-blend-overlay pointer-events-none" />
                                     </div>
 
                                     {/* Content */}

@@ -105,7 +105,7 @@ export default function BrandProductsPage({ params }: Props) {
                                         <img 
                                             src={`/images/products/${product.id}.jpg`} 
                                             alt={product.name}
-                                            className="w-full h-full object-cover mix-blend-lighten opacity-90 group-hover:opacity-100 transition-opacity absolute inset-0 z-0"
+                                            className="w-full h-full object-cover md:mix-blend-lighten opacity-90 group-hover:opacity-100 transition-opacity absolute inset-0 z-0"
                                             onError={(e) => {
                                                 const t = e.target as HTMLImageElement;
                                                 if (t.src.endsWith('.jpg')) t.src = `/images/products/${product.id}.png`;

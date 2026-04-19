@@ -124,7 +124,7 @@ export default function ProductDetailPage({ params }: Props) {
                         <img 
                             src={`/images/products/${product.id}.jpg`} 
                             alt={product.name}
-                            className="w-full h-full object-contain p-6 md:p-12 mix-blend-lighten opacity-95 group-hover:scale-105 transition-transform duration-700 z-0"
+                            className="w-full h-full object-contain p-6 md:p-12 md:mix-blend-lighten opacity-95 group-hover:scale-105 transition-transform duration-700 z-0"
                             onError={(e) => {
                                 const t = e.target as HTMLImageElement;
                                 if (t.src.endsWith('.jpg')) t.src = `/images/products/${product.id}.png`;
@@ -266,7 +266,7 @@ export default function ProductDetailPage({ params }: Props) {
                                             <img 
                                                 src={`/images/products/${p.id}.jpg`} 
                                                 alt={p.name}
-                                                className="w-full h-full object-cover mix-blend-lighten opacity-80 group-hover:opacity-100 transition-opacity"
+                                                className="w-full h-full object-cover md:mix-blend-lighten opacity-80 group-hover:opacity-100 transition-opacity"
                                                 onError={(e) => {
                                                     const t = e.target as HTMLImageElement;
                                                     if (t.src.endsWith('.jpg')) t.src = `/images/products/${p.id}.png`;

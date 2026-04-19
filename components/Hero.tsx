@@ -84,7 +84,7 @@ export default function Hero() {
                 <motion.div style={{ y: textY, opacity, scale }}>
                     {/* Badge */}
                     <motion.div
-                        className="inline-flex items-center gap-2 px-3 sm:px-5 py-2 mb-8 rounded-full border border-white/[0.15] bg-white/[0.08] backdrop-blur-2xl"
+                        className="inline-flex items-center gap-2 px-3 sm:px-5 py-2 mb-8 rounded-full border border-white/[0.15] bg-black/60 md:bg-white/[0.08] md:backdrop-blur-2xl"
                         initial={{ opacity: 0, y: -40, scale: 0.8 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
@@ -159,7 +159,7 @@ export default function Hero() {
                             {/* Glow ring on focus */}
                             <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-amber-500/40 via-yellow-400/30 to-amber-500/40 opacity-0 group-focus-within:opacity-100 blur-sm transition-opacity duration-300" />
 
-                            <div className="relative flex items-center bg-white/[0.07] backdrop-blur-xl border border-white/[0.12] rounded-2xl overflow-hidden">
+                            <div className="relative flex items-center bg-black/60 md:bg-white/[0.07] md:backdrop-blur-xl border border-white/[0.12] rounded-2xl overflow-hidden">
                                 {/* Search icon */}
                                 <Search size={20} className="absolute left-5 text-amber-400/80 pointer-events-none" />
 
@@ -215,7 +215,7 @@ export default function Hero() {
                         </Link>
                         <Link href="/contact" className="w-full sm:w-auto">
                             <motion.button
-                                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-amber-500/40 text-amber-300 rounded-full font-bold text-base sm:text-lg backdrop-blur-sm bg-black/20 hover:bg-amber-500/20 transition-colors"
+                                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-amber-500/40 text-amber-300 rounded-full font-bold text-base sm:text-lg bg-black/60 md:bg-black/20 md:backdrop-blur-sm hover:bg-amber-500/20 transition-colors"
                                 initial={{ opacity: 0, y: 40, scale: 0.8 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 transition={{ delay: 1.4, type: "spring", bounce: 0.5 }}

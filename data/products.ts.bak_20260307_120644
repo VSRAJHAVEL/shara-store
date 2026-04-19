@@ -1,0 +1,74 @@
+import { Product } from "@/types";
+
+export const products: Product[] = [
+    // ── LAPTOPS ──────────────────────────────────────────────────────────
+    { id: 1, name: "Dell Latitude 5540", price: "₹64,999", specs: "Core i5-1345U • 16GB • 512GB SSD • 15.6\" FHD", badge: "Corporate", badgeColor: "blue", initial: "D", category: "Laptops", brand: "Dell", description: "Slim business laptop built for productivity with Intel vPro security." },
+    { id: 2, name: "Dell Inspiron 15 3535", price: "₹48,500", specs: "Ryzen 5 7530U • 8GB • 512GB SSD • 15.6\" FHD", badge: "Value", badgeColor: "green", initial: "D", category: "Laptops", brand: "Dell", description: "Everyday laptop with great battery life and AMD performance." },
+    { id: 3, name: "Dell Vostro 3520", price: "₹41,999", specs: "Core i3-1215U • 8GB • 256GB SSD • 15.6\" FHD", badge: "Starter", badgeColor: "gray", initial: "D", category: "Laptops", brand: "Dell", description: "Reliable budget business laptop for daily office tasks." },
+
+    { id: 4, name: "HP EliteBook 840 G10", price: "₹72,500", specs: "Core i7-1355U • 16GB • 1TB SSD • 14\" FHD IPS", badge: "Business", badgeColor: "blue", initial: "H", category: "Laptops", brand: "HP", description: "Premium enterprise laptop with MIL-SPEC durability." },
+    { id: 5, name: "HP Pavilion 15", price: "₹55,990", specs: "Core i5-1335U • 16GB • 512GB SSD • 15.6\" FHD", badge: "Popular", badgeColor: "blue", initial: "H", category: "Laptops", brand: "HP", description: "Best-selling consumer laptop with sharp display and solid performance." },
+    { id: 6, name: "HP ProBook 450 G10", price: "₹62,000", specs: "Core i5-1335U • 8GB • 512GB SSD • 15.6\" FHD", badge: "Pro", badgeColor: "gray", initial: "H", category: "Laptops", brand: "HP", description: "Durable ProBook designed for business professionals on the go." },
+
+    { id: 7, name: "Lenovo ThinkPad X1 Carbon", price: "₹1,15,000", specs: "Core i7-1365U • 16GB • 1TB SSD • 14\" WUXGA", badge: "Ultra Slim", badgeColor: "gray", initial: "L", category: "Laptops", brand: "Lenovo", description: "The classic ultra-slim business ThinkPad with legendary keyboard." },
+    { id: 8, name: "Lenovo IdeaPad Slim 5", price: "₹52,990", specs: "Ryzen 5 7530U • 16GB • 512GB SSD • 14\" 2.8K", badge: "Creator", badgeColor: "purple", initial: "L", category: "Laptops", brand: "Lenovo", description: "Vibrant 2.8K OLED display for creative work on the go." },
+    { id: 9, name: "Lenovo Yoga 9i", price: "₹1,39,990", specs: "Core i7-1360P • 16GB • 1TB SSD • 14\" OLED", badge: "2-in-1", badgeColor: "amber", initial: "L", category: "Laptops", brand: "Lenovo", description: "Premium 2-in-1 convertible with stunning OLED touchscreen." },
+
+    { id: 10, name: "ASUS VivoBook 15", price: "₹44,990", specs: "Ryzen 5 5600H • 8GB • 512GB SSD • 15.6\" FHD", badge: "Value", badgeColor: "green", initial: "A", category: "Laptops", brand: "Asus", description: "Slim everyday laptop with ASUS DialPad and thin bezels." },
+    { id: 11, name: "ASUS ExpertBook B1", price: "₹54,000", specs: "Core i5-1235U • 8GB • 512GB SSD • 15.6\" FHD", badge: "Business", badgeColor: "blue", initial: "A", category: "Laptops", brand: "Asus", description: "MIL-STD-810H business laptop with up to 14-hour battery." },
+
+    // ── DESKTOPS ─────────────────────────────────────────────────────────
+    { id: 12, name: "Dell OptiPlex 7010", price: "₹55,000", specs: "Core i5-13500 • 8GB • 512GB SSD", badge: "Office", badgeColor: "blue", initial: "D", category: "Desktops", brand: "Dell", description: "Compact office desktop with 13th-gen Intel performance." },
+    { id: 13, name: "Dell Vostro 3910", price: "₹38,500", specs: "Core i3-12100 • 8GB • 1TB HDD", badge: "Value", badgeColor: "green", initial: "D", category: "Desktops", brand: "Dell", description: "Budget tower desktop perfect for schoolwork and office tasks." },
+
+    { id: 14, name: "HP ProDesk 400 G9", price: "₹49,990", specs: "Core i5-12500 • 8GB • 256GB SSD", badge: "Business", badgeColor: "blue", initial: "H", category: "Desktops", brand: "HP", description: "Small form factor HP desktop for professional environments." },
+    { id: 15, name: "HP All-in-One 24", price: "₹62,000", specs: "Core i5-1335U • 8GB • 512GB SSD • 23.8\" FHD", badge: "All-in-One", badgeColor: "gray", initial: "H", category: "Desktops", brand: "HP", description: "All-in-one PC with beautiful borderless display and slim design." },
+
+    { id: 16, name: "Custom Workstation Pro", price: "₹95,000", specs: "Core i9-14900K • 32GB DDR5 • 2TB NVMe • RTX 4060", badge: "Custom", badgeColor: "amber", initial: "C", category: "Desktops", brand: "Custom Build", description: "Hand-built workstation configured to your exact specifications." },
+    { id: 17, name: "Custom Office Mini PC", price: "₹28,000", specs: "Ryzen 5 5600G • 16GB • 512GB SSD", badge: "Compact", badgeColor: "green", initial: "C", category: "Desktops", brand: "Custom Build", description: "Tiny but powerful mini desktop that fits anywhere on your desk." },
+
+    // ── GAMING ───────────────────────────────────────────────────────────
+    { id: 18, name: "ASUS ROG Strix G16", price: "₹1,65,000", specs: "Core i9-14900HX • RTX 4080 • 32GB • 1TB", badge: "Flagship", badgeColor: "red", initial: "R", category: "Gaming", brand: "ASUS ROG", description: "Top-tier gaming laptop with MUX Switch and 240Hz display." },
+    { id: 19, name: "ASUS ROG Zephyrus G14", price: "₹1,19,990", specs: "Ryzen 9 7940HS • RTX 4060 • 16GB • 1TB", badge: "Best Seller", badgeColor: "red", initial: "R", category: "Gaming", brand: "ASUS ROG", description: "Compact and powerful gaming laptop with AniMe Matrix display." },
+
+    { id: 20, name: "MSI Raider GE78 HX", price: "₹2,15,000", specs: "Core i9-14900HX • RTX 4090 • 32GB • 2TB", badge: "Extreme", badgeColor: "red", initial: "M", category: "Gaming", brand: "MSI", description: "The most powerful MSI gaming laptop with no compromises." },
+    { id: 21, name: "MSI Thin GF63", price: "₹72,990", specs: "Core i5-12450H • RTX 4050 • 8GB • 512GB", badge: "Entry Gaming", badgeColor: "green", initial: "M", category: "Gaming", brand: "MSI", description: "Slim and affordable entry-level gaming laptop for new gamers." },
+
+    { id: 22, name: "Custom RTX 4080 Rig", price: "₹1,85,000", specs: "Core i9-14900K • RTX 4080 • 64GB DDR5 • 2TB NVMe", badge: "Custom", badgeColor: "amber", initial: "C", category: "Gaming", brand: "Custom Build", description: "Fully custom gaming tower built for high-FPS streaming and gaming." },
+    { id: 23, name: "Custom Budget Gaming PC", price: "₹55,000", specs: "Ryzen 5 5600X • RX 6650 XT • 16GB • 1TB", badge: "Value", badgeColor: "green", initial: "C", category: "Gaming", brand: "Custom Build", description: "Excellent 1080p gaming performance on a tight budget." },
+
+    { id: 24, name: "Corsair K100 RGB Keyboard", price: "₹18,999", specs: "Cherry MX Speed • OLED SmartKey • Polaris RGB", badge: "Flagship", badgeColor: "red", initial: "C", category: "Gaming", brand: "Corsair", description: "The ultimate mechanical gaming keyboard with OPX optical switches." },
+    { id: 25, name: "Corsair Vengeance DDR5 32GB", price: "₹11,500", specs: "DDR5-6000MHz CL36 • Intel XMP 3.0", badge: "RAM", badgeColor: "gray", initial: "C", category: "Gaming", brand: "Corsair", description: "High-speed DDR5 RAM optimized for 13th/14th gen Intel platforms." },
+
+    // ── CCTV ─────────────────────────────────────────────────────────────
+    { id: 26, name: "Hikvision 4K 8CH Kit", price: "₹32,999", specs: "8x 4K Cameras • 8CH NVR • 2TB HDD • Night Vision", badge: "Best Seller", badgeColor: "green", initial: "H", category: "CCTV", brand: "Hikvision", description: "Complete 4K IP camera kit with smart motion detection." },
+    { id: 27, name: "Hikvision ColorVu Turret", price: "₹4,999", specs: "4MP • Full Color Night Vision • IP67 • PoE", badge: "Color Night", badgeColor: "blue", initial: "H", category: "CCTV", brand: "Hikvision", description: "Always-on full-color surveillance even in complete darkness." },
+
+    { id: 28, name: "CP Plus 2MP Wi-Fi Cam", price: "₹2,499", specs: "2MP • 360° Pan-Tilt • Two-Way Audio • SD 128GB", badge: "Smart Home", badgeColor: "green", initial: "C", category: "CCTV", brand: "CP Plus", description: "Easy Wi-Fi indoor camera for home monitoring via mobile app." },
+    { id: 29, name: "CP Plus 4CH DVR Kit", price: "₹14,999", specs: "4x 2MP Cameras • 4CH DVR • 1TB HDD", badge: "Value", badgeColor: "amber", initial: "C", category: "CCTV", brand: "CP Plus", description: "Affordable entry-level CCTV kit for shops and homes." },
+
+    { id: 30, name: "Dahua IPC-HDW2831T", price: "₹3,799", specs: "8MP • 4K • IR 30m • IP67 • H.265+", badge: "4K", badgeColor: "blue", initial: "D", category: "CCTV", brand: "Dahua", description: "4K dome camera with superior H.265+ compression for storage savings." },
+
+    // ── UPS & INVERTER ───────────────────────────────────────────────────
+    { id: 31, name: "APC Smart-UPS 1500VA", price: "₹22,500", specs: "1500VA • 980W • 2-3hr Backup • LCD Display", badge: "Best Seller", badgeColor: "green", initial: "A", category: "UPS & Inverter", brand: "APC", description: "Industry-leading double-conversion online UPS for critical equipment." },
+    { id: 32, name: "APC Back-UPS 1100VA", price: "₹8,499", specs: "1100VA • 660W • 30min Backup", badge: "Home", badgeColor: "blue", initial: "A", category: "UPS & Inverter", brand: "APC", description: "Reliable home UPS with automatic voltage regulation." },
+
+    { id: 33, name: "Luminous Zelio+ 1100", price: "₹6,999", specs: "900VA • Pure Sine Wave • Digital Display", badge: "Home", badgeColor: "amber", initial: "L", category: "UPS & Inverter", brand: "Luminous", description: "Pure sine-wave inverter compatible with modern appliances." },
+    { id: 34, name: "Luminous iCon 1250", price: "₹9,500", specs: "1050VA • Fast Charging • Eco Mode", badge: "Smart", badgeColor: "green", initial: "L", category: "UPS & Inverter", brand: "Luminous", description: "Smart inverter with eco mode to reduce power consumption." },
+
+    { id: 35, name: "Microtek M-SUN 1050", price: "₹7,200", specs: "900VA • Modified Sine Wave • LED Display", badge: "Value", badgeColor: "gray", initial: "M", category: "UPS & Inverter", brand: "Microtek", description: "Affordable and efficient pure sine wave inverter for homes." },
+
+    // ── ACCESSORIES ──────────────────────────────────────────────────────
+    { id: 36, name: "Logitech MX Master 3S", price: "₹9,995", specs: "Wireless • 8K DPI • Silent Clicks • USB-C", badge: "Premium", badgeColor: "amber", initial: "L", category: "Accessories", brand: "Logitech", description: "The ultimate productivity mouse with electromagnetic scrolling." },
+    { id: 37, name: "Logitech MX Keys S", price: "₹11,495", specs: "Wireless • Backlights • Multi-Device • USB-C", badge: "Keyboard", badgeColor: "gray", initial: "L", category: "Accessories", brand: "Logitech", description: "Smart illuminated keyboard for cross-device typing." },
+
+    { id: 38, name: "Samsung T7 Shield 1TB", price: "₹8,999", specs: "Portable SSD • Rugged • 1050MB/s • USB-C", badge: "Storage", badgeColor: "blue", initial: "S", category: "Accessories", brand: "Samsung", description: "Rugged and ultra-fast portable SSD for on-the-go storage." },
+    { id: 39, name: "Samsung 32\" M80C Monitor", price: "₹45,990", specs: "4K • Smart TV • USB-C 65W • SlimFit Camera", badge: "Smart", badgeColor: "blue", initial: "S", category: "Accessories", brand: "Samsung", description: "Smart 4K monitor that doubles as a TV with built-in speakers." },
+
+    { id: 40, name: "Kingston NV2 1TB SSD", price: "₹4,299", specs: "NVMe PCIe 4.0 • 3500MB/s Read • M.2 2280", badge: "SSD", badgeColor: "gray", initial: "K", category: "Accessories", brand: "Kingston", description: "High-value NVMe SSD for fast boot and application loading." },
+    { id: 41, name: "Kingston DDR4 16GB", price: "₹2,799", specs: "DDR4-3200MHz • CL22 • Non-ECC", badge: "RAM", badgeColor: "gray", initial: "K", category: "Accessories", brand: "Kingston", description: "Reliable DDR4 memory module for upgrades and new builds." },
+
+    { id: 42, name: "Zebronics 2.1 Speaker", price: "₹1,499", specs: "40W RMS • Bluetooth 5.0 • AUX • USB", badge: "Audio", badgeColor: "purple", initial: "Z", category: "Accessories", brand: "Zebronics", description: "Rich 2.1 sound system with deep bass for desktop use." },
+
+    { id: 43, name: "TP-Link Archer AX73", price: "₹7,999", specs: "Wi-Fi 6 • AX5400 • Dual Band • 6 Antennas", badge: "Wi-Fi 6", badgeColor: "blue", initial: "T", category: "Accessories", brand: "TP-Link", description: "Next-gen Wi-Fi 6 router for fast, interference-free connectivity." },
+];

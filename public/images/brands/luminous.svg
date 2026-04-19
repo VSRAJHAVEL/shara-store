@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg_luminous" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="accent_luminous" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#F59E0B88"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="24" fill="url(#bg_luminous)"/>
+  <rect x="1" y="1" width="198" height="198" rx="23" fill="none" stroke="#F59E0B33" stroke-width="1.5"/>
+  <rect x="30" y="150" width="140" height="3" rx="1.5" fill="#F59E0B44"/>
+  <text x="100" y="108" text-anchor="middle" font-family="Segoe UI,system-ui,sans-serif" font-size="22" font-weight="800" fill="#F59E0B" letter-spacing="2">LUMINOUS</text>
+  <text x="100" y="175" text-anchor="middle" font-family="Segoe UI,system-ui,sans-serif" font-size="9" fill="#666" letter-spacing="4" text-transform="uppercase">OFFICIAL PARTNER</text>
+</svg>

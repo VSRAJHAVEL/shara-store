@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@theme {
+  /* Dark Theme Colors */
+  --color-background: #0a0a0f;
+  --color-foreground: #f0f0f5;
+
+  --color-primary: #f59e0b;
+  --color-primary-light: #fbbf24;
+  --color-primary-dark: #d97706;
+  --color-secondary: #d4af37;
+  --color-secondary-light: #e8c860;
+  --color-accent: #f59e0b;
+  --color-accent-light: #fbbf24;
+
+  --color-text-primary: #f0f0f5;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #71717a;
+
+  --color-border-light: rgba(212, 175, 55, 0.15);
+  --color-surface: #111118;
+  --color-surface-hover: #1a1a24;
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-inter);
+
+  /* Animations */
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes slide-up {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      opacity: 1;
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+    }
+
+    50% {
+      opacity: 0.7;
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+
+    100% {
+      background-position: 200% 0;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: transparent;
+  --foreground: #f0f0f5;
+}
+
+body {
+  background: transparent;
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d97706, #f59e0b);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #f59e0b, #fbbf24);
+}
+
+/* Utilities — iOS Frosted Glass */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px) saturate(1.8);
+  -webkit-backdrop-filter: blur(20px) saturate(1.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #f59e0b, #fbbf24, #d4af37, #f59e0b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: bg-pan 3s linear infinite;
+}
+
+@keyframes bg-pan {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+
+
+/* Selection color */
+::selection {
+  background: rgba(245, 158, 11, 0.3);
+  color: #fff;
+}

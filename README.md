@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shara Computers Store
 
-## Getting Started
+![Shara Computers](public/favicon.ico)
 
-First, run the development server:
+A premium, high-performance E-Commerce storefront built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**.
+
+## Overview
+Shara Computers provides a sleek hardware and accessories shopping experience. The architecture revolves around an immersive aesthetic (utilizing hardware-accelerated Canvas scroll sequences) and a modern Request-a-Quote pipeline via a direct WhatsApp integration.
+
+## Key Features
+- ⚡ **Next.js App Router**: Server-Side Rendering (SSR) and seamless Static Site Generation (SSG) for instantaneous product navigation.
+- 🎨 **Dynamic Canvas Animations**: Immersive frame-by-frame background animations mapped to touch/scroll tracking via Framer Motion's `useScroll` and `requestAnimationFrame`.
+- 🛒 **Zero-Backend Cart**: LocalStorage-driven cart management seamlessly integrated into an instant WhatsApp checkout flow.
+- 📱 **Fully Responsive**: Mobile-first Tailwind utility architecture with glassmorphism drop-shadows and rich dark/amber themes. 
+- 🗄️ **Comprehensive Catalog**: 200+ distinct tech products spanning Desktop PCs, Laptops, Keyboards, CCTV, and Monitors with real world metadata and category/brand dynamic routing (`/products/[category]/[brand]/[id]`).
+
+## Tech Stack
+- **Framework**: Next.js (App Router)
+- **Styling**: Tailwind CSS v3
+- **Animations**: Framer Motion
+- **Icons**: Lucide React / React Icons
+- **Deployment**: Vercel / Render
+
+## Getting Started Locally
+
+First, make sure you have Node.js installed. Then, clone the repository and install the dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build and Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To build the optimized static production bundle:
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+Maintained by Rajhavel V S.

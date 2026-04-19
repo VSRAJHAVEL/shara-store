@@ -24,6 +24,7 @@ export default function ScrollVideoBackground({
     const framesRef = useRef<Map<number, HTMLImageElement>>(new Map());
     const sortedKeysRef = useRef<number[]>([]);
     const lastDrawnRef = useRef<number>(-1);
+    const lastWidthRef = useRef<number>(typeof window !== "undefined" ? window.innerWidth : 0);
     const [showLoader, setShowLoader] = useState(true);
 
     // The React-bound useScroll was removed in favor of a Vanilla engine (see below) to eliminate Main Thread load.
@@ -102,6 +103,13 @@ export default function ScrollVideoBackground({
         ctxRef.current = canvas.getContext("2d", { alpha: false });
 
         const resize = () => {
+            const isMobile = window.innerWidth < 768;
+            if (isMobile && window.innerWidth === lastWidthRef.current && canvas.width !== 0) {
+                // Block the resize if only the height changed (fixes Safari URL bar jitter!)
+                return;
+            }
+            lastWidthRef.current = window.innerWidth;
+
             const dpr = window.devicePixelRatio || 1;
             canvas.width = window.innerWidth * dpr;
             canvas.height = window.innerHeight * dpr;

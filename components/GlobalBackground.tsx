@@ -20,7 +20,7 @@ export default function GlobalBackground() {
                     frameCount={192}
                     framePath={(i: number) => `/products-frames/${i.toString().padStart(5, "0")}.jpg`}
                     frameStep={2}
-                    objectFit="cover"
+                    objectFit="contain"
                     opacity={0.8}
                 />
             ) : (

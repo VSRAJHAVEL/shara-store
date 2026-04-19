@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
-import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface ScrollVideoBackgroundProps {
@@ -26,13 +26,7 @@ export default function ScrollVideoBackground({
     const lastDrawnRef = useRef<number>(-1);
     const [showLoader, setShowLoader] = useState(true);
 
-    const { scrollYProgress } = useScroll();
-    
-    // We removed useSpring here because modern trackpads natively supply hardware-accelerated 
-    // smooth momentum scrolling. Wrapping native momentum in mathematical spring physics 
-    // causes a delayed, trailing effect that users perceive as "lag". 
-    // 1:1 mapping feels much more responsive.
-    const frameIndex = useTransform(scrollYProgress, [0, 1], [1, frameCount]);
+    // The React-bound useScroll was removed in favor of a Vanilla engine (see below) to eliminate Main Thread load.
 
     // Build list of frame indices to load
     const frameList = useRef<number[]>([]);
@@ -112,21 +106,44 @@ export default function ScrollVideoBackground({
             canvas.width = window.innerWidth * dpr;
             canvas.height = window.innerHeight * dpr;
             lastDrawnRef.current = -1; // force redraw
-            drawNearest(frameIndex.get());
+            
+            // Recalculate frame natively without React state
+            const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+            const scrollPct = Math.max(0, Math.min(1, window.scrollY / maxScroll));
+            const targetFrame = Math.round(1 + scrollPct * (frameCount - 1));
+            
+            drawNearest(targetFrame);
         };
         window.addEventListener("resize", resize);
         resize();
         return () => window.removeEventListener("resize", resize);
     }, [drawNearest]);
 
-    // Scroll handler — batch drawing to the browser's native paint cycle
-    const rafRef = useRef<number>(null);
-    useMotionValueEvent(frameIndex, "change", (latest) => {
-        if (rafRef.current) cancelAnimationFrame(rafRef.current);
-        rafRef.current = requestAnimationFrame(() => {
-            drawNearest(latest);
-        }) as any;
-    });
+    // Vanilla Scroll Engine (Bypasses React VDOM entirely for perfect 120hz frame parity natively)
+    useEffect(() => {
+        let ticking = false;
+        
+        const onScroll = () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+                    const scrollPct = Math.max(0, Math.min(1, window.scrollY / maxScroll));
+                    const targetFrame = Math.round(1 + scrollPct * (frameCount - 1));
+                    
+                    drawNearest(targetFrame);
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        };
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+        
+        // Initial setup execution
+        onScroll();
+        
+        return () => window.removeEventListener("scroll", onScroll);
+    }, [frameCount, drawNearest]);
 
     // Load frames ONE AT A TIME sequentially — no server flooding
     useEffect(() => {
@@ -172,7 +189,7 @@ export default function ScrollVideoBackground({
 
     return (
         <>
-            <div className="fixed inset-0 -z-10 bg-black">
+            <div className="fixed inset-0 -z-10 bg-black transform-gpu will-change-transform">
                 <canvas ref={canvasRef} className="w-full h-full" style={{ opacity }} />
             </div>
 

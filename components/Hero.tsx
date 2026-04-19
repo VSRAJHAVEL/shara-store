@@ -25,13 +25,13 @@ export default function Hero() {
 
             {/* Animated horizontal gold lines */}
             <motion.div
-                className="absolute top-[30%] left-0 right-0 h-px"
+                className="absolute top-[30%] left-0 right-0 h-px hidden md:block"
                 style={{ background: "linear-gradient(90deg, transparent, rgba(212,175,55,0.4), transparent)" }}
                 animate={{ opacity: [0.1, 0.5, 0.1] }}
                 transition={{ duration: 4, repeat: Infinity }}
             />
             <motion.div
-                className="absolute top-[65%] left-0 right-0 h-px"
+                className="absolute top-[65%] left-0 right-0 h-px hidden md:block"
                 style={{ background: "linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent)" }}
                 animate={{ opacity: [0.2, 0.6, 0.2] }}
                 transition={{ duration: 5, repeat: Infinity, delay: 1 }}
@@ -57,7 +57,7 @@ export default function Hero() {
             {[...Array(12)].map((_, i) => (
                 <motion.div
                     key={i}
-                    className="absolute rounded-full"
+                    className="absolute rounded-full hidden md:block"
                     style={{
                         left: `${5 + (i * 53) % 90}%`,
                         top: `${8 + (i * 37) % 84}%`,

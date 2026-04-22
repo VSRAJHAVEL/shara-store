@@ -5,6 +5,7 @@ import CustomCursor from "@/components/ui/CustomCursor";
 import Navbar from "@/components/Navbar";
 import { CartProvider } from "@/context/CartContext";
 import GlobalBackground from "@/components/GlobalBackground";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -34,6 +35,7 @@ export default function RootLayout({
             {children}
           </div>
         </CartProvider>
+        <Analytics />
       </body>
     </html>
   );
